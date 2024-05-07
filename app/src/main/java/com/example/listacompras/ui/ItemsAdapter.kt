@@ -1,4 +1,4 @@
-package com.example.listacompras
+package com.example.listacompras.ui
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.listacompras.R
+import com.example.listacompras.model.ItemModel
 
 
 class ItemsAdapter: RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {

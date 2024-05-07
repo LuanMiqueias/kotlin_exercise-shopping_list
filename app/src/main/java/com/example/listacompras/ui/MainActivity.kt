@@ -1,17 +1,19 @@
-package com.example.listacompras
+package com.example.listacompras.ui
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.listacompras.viewmodel.ItemsViewModel
+import com.example.listacompras.viewmodel.ItemsViewModelFactory
+import com.example.listacompras.R
 
 class MainActivity : AppCompatActivity() {
-    val viewModel: ItemsViewModel by viewModels();
+    private val viewModel: ItemsViewModel by viewModels {
+        ItemsViewModelFactory(applicationContext)
+    };
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
